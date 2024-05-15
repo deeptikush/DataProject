@@ -1,0 +1,9 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+
+externalservice:
+  url: https://sit-api.morrisons.com/count/v1/stores/238/items?apikey=WdnlpVP2IsaeRXuyi8ijvGfIEKrJs1Ky&status=Ready&limit=10&offset=0
+  token: V2RubHBWUDJJc2FlUlh1eWk4aWp2R2ZJRUtySnMxS3k6WkFKbXg4TVQzNUZiTHM2aQ==

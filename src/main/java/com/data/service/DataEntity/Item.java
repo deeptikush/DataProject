@@ -2,7 +2,10 @@ package com.data.service.DataEntity;
 
 import java.util.Date;
 
+
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,6 +13,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Getter
 @Setter
@@ -18,8 +25,11 @@ import lombok.ToString;
 @JsonIgnoreProperties
 @ToString
 @Data
+@Entity(name="items")
 public class Item {
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
 	private long countItemsId;
 	private long storeId   ;
 	private String itemNumber ;
